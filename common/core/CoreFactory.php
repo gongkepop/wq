@@ -7,12 +7,13 @@
  */
 require 'ErrorCode.php';
 
-
-
 class CoreFactory
 {
-    const COMP_ID= 743;
-    const SHOP_ID= 692;
+    const COMP_ID = 743;
+    const SHOP_ID = 692;
+    const HQ_WEB = '/Sync/';
+
+
     /**
      * 格式化输出
      * @param $code
@@ -52,5 +53,15 @@ class CoreFactory
     public static function formatSuccess($result = [], $message = null)
     {
         return self::format(ErrorCode::NO_ERROR, $result, $message);
+    }
+
+    public static function urlGo($redirect, $msg = '')
+    {
+
+        if (!empty($msg)) {
+            echo "<script>alert('" . $msg . "');</script>" ;
+        }
+        $redirect = 'http://' . $_SERVER['SERVER_NAME'] . self::HQ_WEB . $redirect;
+        header('Location: ' . $redirect);
     }
 }

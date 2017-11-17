@@ -6,7 +6,7 @@
  * Time: 17:07
  */
 
-require_once 'common\core\CurlBase.php';
+require_once 'common/core/CurlBase.php';
 require_once 'common/core/CoreFactory.php';
 
 class AddToHaiQi
