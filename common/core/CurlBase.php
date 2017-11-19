@@ -15,8 +15,7 @@ class CurlBase
     public function get($url, $params)
     {
 
-        $url = $url . http_build_query($params);
-        echo $url;die;
+        $url = $url .'?'. http_build_query($params);
         $ch = curl_init();
         //设置选项，包括URL
         curl_setopt($ch, CURLOPT_URL, $url);

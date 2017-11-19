@@ -11,7 +11,7 @@ class CoreFactory
 {
     const COMP_ID = 743;
     const SHOP_ID = 692;
-    const HQ_WEB = '/Sync/';
+    const HQ_WEB = '/wq/';
 
 
     /**

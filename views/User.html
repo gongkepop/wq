@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="http://t.com/wq/web/resource/css/bootstrap.min.css?v=20170907" rel="stylesheet">
-    <link href="http://t.com/wq/web/resource/css/common.css?v=20170907" rel="stylesheet">
-    <script type="text/javascript" src="http://t.com/wq/web/resource/js/lib/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://t.com/wq/web/resource/js/lib/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://t.com/wq/web/resource/js/app/util.js?v=20170907"></script>
-    <script type="text/javascript" src="http://t.com/wq/web/resource/js/app/common.min.js?v=20170907"></script>
-    <script type="text/javascript" src="http://t.com/wq/web/resource/js/require.js?v=20170907"></script>
+    <script type="javascript">
+        var host = window.location.host;
+    </script>
+    <link href="../../web/resource/css/bootstrap.min.css?v=20170907" rel="stylesheet">
+    <link href="../../web/resource/css/common.css?v=20170907" rel="stylesheet">
+    <script type="text/javascript" src="../../web/resource/js/lib/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../web/resource/js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../web/resource/js/app/util.js?v=20170907"></script>
+    <script type="text/javascript" src="../../web/resource/js/app/common.min.js?v=20170907"></script>
+    <script type="text/javascript" src="../../web/resource/js/require.js?v=20170907"></script>
 </head>
 <body>
 <div class="head">
     <nav class="navbar navbar-default" role="navigation">
         <div class="container ">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://t.com/wq/">
-                    <img src="http://t.com/wq/web/resource/images/logo/logo.png" class="pull-left" width="110px"
+                <a class="navbar-brand" href="../../">
+                    <img src="../../web/resource/images/logo/logo.png" class="pull-left" width="110px"
                          height="35px">
                     <span class="version hidden">1.0</span>
                 </a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="./index.php?c=home&a=welcome&do=platform&">公众号</a></li>
-                    <li><a href="./index.php?c=wxapp&a=display&do=home&">小程序</a></li>
-                    <li><a href="./index.php?c=module&a=display&">应用</a></li>
-                    <li><a href="./index.php?c=home&a=welcome&do=system&">系统管理</a></li>
-                    <li><a href="./index.php?c=cloud&a=upgrade&">站点管理</a></li>
-                    <li><a href="./index.php?c=advertisement&a=content-provider&">广告联盟</a></li>
-                    <li><a href="http://s.we7.cc" target="_blank">应用市场</a></li>
-                    <li><a href="./index.php?c=help&a=display&" target="_blank">帮助系统</a></li>
+                    <li class="active"><a href="./../../../index.php?c=home&a=welcome&do=platform&">公众号</a></li>
+                    <li><a href="./../../../index.php?c=wxapp&a=display&do=home&">小程序</a></li>
+                    <li><a href="./../../../index.php?c=module&a=display&">应用</a></li>
+                    <li><a href="./../../../index.php?c=home&a=welcome&do=system&">系统管理</a></li>
+                    <li><a href="./../../../index.php?c=cloud&a=upgrade&">站点管理</a></li>
+                    <li><a href="./../../../index.php?c=advertisement&a=content-provider&">广告联盟</a></li>
+                    <li><a href="./../../../index.php?c=help&a=display&" target="_blank">帮助系统</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -39,17 +41,17 @@
                                 class="wi wi-user color-gray"></i>admin <span class="caret"></span></a>
                         <ul class="dropdown-menu color-gray" role="menu">
                             <li>
-                                <a href="./index.php?c=user&a=profile&" target="_blank"><i
+                                <a href="./../../../index.php?c=user&a=profile&" target="_blank"><i
                                         class="wi wi-account color-gray"></i> 我的账号</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="./index.php?c=cloud&a=upgrade&" target="_blank"><i
+                            <li><a href="./../../../index.php?c=cloud&a=upgrade&" target="_blank"><i
                                     class="wi wi-update color-gray"></i> 自动更新</a></li>
-                            <li><a href="./index.php?c=system&a=updatecache&" target="_blank"><i
+                            <li><a href="./../../../index.php?c=system&a=updatecache&" target="_blank"><i
                                     class="wi wi-cache color-gray"></i> 更新缓存</a></li>
                             <li class="divider"></li>
                             <li>
-                                <a href="./index.php?c=user&a=logout&"><i class="fa fa-sign-out color-gray"></i>
+                                <a href="./../../../index.php?c=user&a=logout&"><i class="fa fa-sign-out color-gray"></i>
                                     退出系统</a>
                             </li>
                         </ul>
@@ -68,27 +70,27 @@
                 </div>
                 <ul class="list-group">
                     <li class="list-group-item ">
-                        <a href="./index.php?c=platform&a=reply&" class="text-over">
+                        <a href="./../../../index.php?c=mc&a=member&" class="text-over">
                             <i class="wi wi-reply"></i>
-                            自动回复 </a>
+                            会员管理 </a>
                     </li>
                     <li class="list-group-item ">
-                        <a href="./index.php?c=platform&a=qr&" class="text-over">
+                        <a href="./../../../index.php?c=platform&a=qr&" class="text-over">
                             <i class="wi wi-qrcode"></i>
                             二维码/转化链接 </a>
                     </li>
                     <li class="list-group-item ">
-                        <a href="./index.php?c=platform&a=mass&" class="text-over">
+                        <a href="./../../../index.php?c=platform&a=mass&" class="text-over">
                             <i class="wi wi-crontab"></i>
                             定时群发 </a>
                     </li>
                     <li class="list-group-item ">
-                        <a href="./index.php?c=platform&a=material&" class="text-over">
+                        <a href="./../../../index.php?c=platform&a=material&" class="text-over">
                             <i class="wi wi-redact"></i>
                             素材/编辑器 </a>
                     </li>
                     <li class="list-group-item ">
-                        <a href="./index.php?c=site&a=multi&do=display&" class="text-over">
+                        <a href="./../../../index.php?c=site&a=multi&do=display&" class="text-over">
                             <i class="wi wi-home"></i>
                             微官网-文章 </a>
                     </li>
@@ -100,12 +102,12 @@
                 </div>
                 <ul class="list-group">
                     <li class="list-group-item ">
-                        <a href="./index.php?c=mc&a=fans&" class="text-over">
+                        <a href="./../../../index.php?c=mc&a=fans&" class="text-over">
                             <i class="wi wi-fansmanage"></i>
                             粉丝管理 </a>
                     </li>
                     <li class="list-group-item active">
-                        <a href="./index.php?c=mc&a=member&" class="text-over">
+                        <a href="./../../../index.php?c=mc&a=member&" class="text-over">
                             <i class="wi wi-fans"></i>
                             会员管理 </a>
                     </li>
@@ -117,7 +119,8 @@
     <div style="background: #FFF;margin-left: 10px;">
         <div class="right-content" style="width: 1000px;">
             <div class="panel">
-                <form action="./../controllers/addUser.php" method="post" class="we7-form bv-form" role="form" id="form1" novalidate="novalidate">
+                <form action="./../controllers/addUser.php" method="post" class="we7-form bv-form" role="form"
+                      id="form1" novalidate="novalidate">
                     <div class="form-group">
                         <label class="col-sm-2 control-label">会员姓名</label>
 
@@ -212,90 +215,8 @@
         </div>
 
     </div>
-    <script>
-        require(['validator'], function () {
-            $(function () {
-                $('#form1').bootstrapValidator({
-                    fields: {
-                        realname: {
-                            validators: {
-                                notEmpty: {
-                                    message: '姓名不能为空'
-                                }
-                            }
-                        },
-                        mobile: {
-                            validators: {
-                                notEmpty: {
-                                    message: '手机不能为空'
-                                },
-                                regexp: {
-                                    regexp: /1\d{10}/,
-                                    message: '手机号格式不正确'
-                                },
-                                remote: {
-                                    url: "./index.php?c=mc&a=member&do=add&",
-                                    data: function (validator) {
-                                        return {
-                                            type: 'mobile',
-                                            data: validator.getFieldElements('mobile').val()
-                                        };
-                                    },
-                                    message: '手机号已经被占用'
-                                }
-                            }
-                        },
-                        email: {
-                            validators: {
-                                regexp: {
-                                    regexp: /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
-                                    message: '邮箱格式不正确'
-                                },
-                                remote: {
-                                    url: "./index.php?c=mc&a=member&do=add&",
-                                    data: function (validator) {
-                                        return {
-                                            type: 'email',
-                                            data: validator.getFieldElements('email').val()
-                                        };
-                                    },
-                                    message: '邮箱已经被占用'
-                                }
-                            }
-                        },
-                        password: {
-                            validators: {
-                                notEmpty: {
-                                    message: '密码不能为空'
-                                },
-                                stringLength: {
-                                    min: 8,
-                                    max: 15,
-                                    message: '密码最少为8位'
-                                }
-                            }
-                        },
-                        credit1: {
-                            validators: {
-                                regexp: {
-                                    regexp: /^[0-9]\d*$/i,
-                                    message: '积分格式不正确'
-                                }
-                            }
-                        },
-                        credit2: {
-                            validators: {
-                                regexp: {
-                                    regexp: /^[0-9]\d*$/i,
-                                    message: '余额格式不正确'
-                                }
-                            }
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+
+
 </div>
 </body>
 </html>
