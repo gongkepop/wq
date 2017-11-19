@@ -57,11 +57,13 @@ class CoreFactory
 
     public static function urlGo($redirect, $msg = '')
     {
-
-        if (!empty($msg)) {
-            echo "<script>alert('" . $msg . "');</script>" ;
-        }
         $redirect = 'http://' . $_SERVER['SERVER_NAME'] . self::HQ_WEB . $redirect;
+        if (!empty($msg)) {
+            echo "<script>alert('" . $msg . "'); location.href='$redirect'; </script>" ;
+
+        }
+
+
         header('Location: ' . $redirect);
     }
 }

@@ -49,6 +49,6 @@ $haiqi = new AddToHaiQi();
 $haiqi->addUser($data);
 
 
-//CoreFactory::urlGo('views/User.html', '创建成功用户id' . $uid);
+CoreFactory::urlGo('views/User.html', '创建成功用户id' . $uid);
 
 
