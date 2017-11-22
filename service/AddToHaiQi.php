@@ -27,15 +27,41 @@ class AddToHaiQi
         $params = [
             'm' => 'addcard',
             'CardID' => $params['mobile'],
-            'CardName' => $params['mobile'],
+            'CardName' => $params['realname'],
             'PassWord' => $params['password'],
             'CompId' => CoreFactory::COMP_ID,
             'ShopId' => CoreFactory::SHOP_ID,
             'groupId' => '1',
             'mobile' => $params['mobile'],
             'realname' => $params['realName'],
-            'score' => $params['score'],
-            'money' => $params['amount']
+            'Point' => $params['score'],
+            'Money' => $params['amount']
+        ];
+
+        $this->_curl->get(self::HAI_QI_ADD_USER_URL, $params);
+    }
+//http://weiqing.liansuosoft.com/syn.ashx?m=point&CardID=13811111129&CompId=743&ShopId=692&groupId=1&Point=22&Remark=
+    public function updateScore($params){
+        $params = [
+            'm' => 'point',
+            'CardID' => $params['mobile'],
+            'CompId' => CoreFactory::COMP_ID,
+            'ShopId' => CoreFactory::SHOP_ID,
+            'groupId' => '1',
+            'Point' => $params['score'],
+        ];
+
+        $this->_curl->get(self::HAI_QI_ADD_USER_URL, $params);
+    }
+//http://weiqing.liansuosoft.com/syn.ashx?m=money&CardID=13811111129&CompId=743&ShopId=692&groupId=1&Money=22&Remark=
+    public function updateAmount($params){
+        $params = [
+            'm' => 'money',
+            'CardID' => $params['mobile'],
+            'CompId' => CoreFactory::COMP_ID,
+            'ShopId' => CoreFactory::SHOP_ID,
+            'groupId' => '1',
+            'Money' => $params['amount']
         ];
 
         $this->_curl->get(self::HAI_QI_ADD_USER_URL, $params);

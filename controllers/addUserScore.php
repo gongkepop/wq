@@ -20,7 +20,7 @@ if (trim($_GPC['mobile'])) {
 } else {
     CoreFactory::urlGo('views/User.html', '手机号被不能为空');
 }
-//$user = pdo_get('mc_members', array('uniacid' => $_W['uniacid'], 'mobile' => $mobile));
+$user = pdo_get('mc_members', array('uniacid' => 1, 'mobile' => $mobile));
 //
 //if (!empty($user) || !$user) {
 //    CoreFactory::urlGo('views/User.html', '手机号被占用');
@@ -30,36 +30,21 @@ $password = $_GPC['password'];
 
 $salt = random(8);
 $data = array(
-    'uniacid' => $_W['uniacid'],
-    'realname' => $_W['realname'],
-    'mobile' => $mobile,
-    'email' => $_W['email'],
-    'salt' => $salt,
-    'password' => md5(trim($password) . $salt . $_W['config']['setting']['authkey']),
-    'credit1' => intval($_GPC['credit1']),
-    'credit2' => intval($_GPC['credit2']),
-    'groupid' => intval($_GPC['groupid']),
-    'createtime' => TIMESTAMP,
+    'credit1' => $user['credit1'] + intval($_GPC['credit1']),
 );
 
-pdo_insert('mc_members', $data);
+pdo_update('mc_members', $data);
 $uid = pdo_insertid();
 
 
 $params = [
-    'CardID' => $mobile,
-    'CardName' => $_W['realname'],
-    'password' => $password,
-    'mobile' => $mobile,
-    'realname' =>  $_W['realname'],
     'score' => intval($_GPC['credit1']),
-    'amount' => intval($_GPC['credit2'])
 ];
 
 $haiqi = new AddToHaiQi();
 $haiqi->addUser($params);
 
 
-CoreFactory::urlGo('views/User.html', '创建成功用户id' . $uid);
+CoreFactory::urlGo('views/User.html', '更新积分成功用户id' . $uid);
 
 

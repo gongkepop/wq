@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="javascript">
+        var host = window.location.host;
+    </script>
+    <link href="../../web/resource/css/bootstrap.min.css?v=20170907" rel="stylesheet">
+    <link href="../../web/resource/css/common.css?v=20170907" rel="stylesheet">
+    <script type="text/javascript" src="../../web/resource/js/lib/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../web/resource/js/lib/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="./js/jquery.js?v=20170907"></script>
+    <script type="text/javascript" src="./js/headMenu.js?v=20170907"></script>
+    <script type="text/javascript" src="./js/leftMenu.js?v=20170907"></script>
+    <script type="text/javascript" src="./js/userAmount.js?v=20170908"></script>
+</head>
+<body>
+<div class="head" id="head">
+
+</div>
+<div class="panel-body clearfix main-panel-body ">
+    <div class="left-menu"  id="leftMenu">
+
+    </div>
+    <div style="background: #FFF;margin-left: 10px;">
+        <div class="right-content" style="width: 1000px;">
+            <div class="panel">
+                <form action="./../controllers/addUserScore.php" method="post" class="we7-form bv-form" role="form"
+                      id="form1" novalidate="novalidate">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">会员姓名</label>
+
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="realname" value="" class="form-control" data-bv-field="realname" readonly>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">手机号</label>
+
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="mobile" value="" class="form-control" data-bv-field="mobile" readonly>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">余额</label>
+
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="credit2" value="0" class="form-control" data-bv-field="credit2">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden" name="uid" value="" id="uid">
+                        <div class="">
+                            <input type="submit" value="提交" class="btn btn-primary">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>
+
