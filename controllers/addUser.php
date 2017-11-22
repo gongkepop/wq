@@ -31,9 +31,9 @@ $password = $_GPC['password'];
 $salt = random(8);
 $data = array(
     'uniacid' => $_W['uniacid'],
-    'realname' => $_W['realname'],
+    'realname' => $_GPC['realname'],
     'mobile' => $mobile,
-    'email' => $_W['email'],
+    'email' => $_GPC['email'],
     'salt' => $salt,
     'password' => md5(trim($password) . $salt . $_W['config']['setting']['authkey']),
     'credit1' => intval($_GPC['credit1']),
@@ -48,10 +48,10 @@ $uid = pdo_insertid();
 
 $params = [
     'CardID' => $mobile,
-    'CardName' => $_W['realname'],
+    'CardName' => $_GPC['realname'],
     'password' => $password,
     'mobile' => $mobile,
-    'realname' =>  $_W['realname'],
+    'realname' =>  $_GPC['realname'],
     'score' => intval($_GPC['credit1']),
     'amount' => intval($_GPC['credit2'])
 ];

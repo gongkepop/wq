@@ -12,7 +12,7 @@ require 'common/core/CoreFactory.php';
 
 $uniacid = isset($_W['uniacid']) ?: 1;
 
-//$realname = trim($_GPC['realname']) ? trim($_GPC['realname']) : itoast('姓名不能为空', '', '');
+$realname = trim($_GPC['realname']) ? trim($_GPC['realname']) : '';
 if( trim($_GPC['mobile']) ){
     $mobile = trim($_GPC['mobile']);
 } else{

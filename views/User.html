@@ -13,6 +13,9 @@
     <script type="text/javascript" src="../../web/resource/js/app/util.js?v=20170907"></script>
     <script type="text/javascript" src="../../web/resource/js/app/common.min.js?v=20170907"></script>
     <script type="text/javascript" src="../../web/resource/js/require.js?v=20170907"></script>
+    <script type="text/javascript" src="./js/jquery.js?v=20170907"></script>
+    <script type="text/javascript" src="./js/headMenu.js?v=20170907"></script>
+    <script type="text/javascript" src="./js/leftMenu.js?v=20170907"></script>
 </head>
 <body>
 <div class="head">
@@ -58,59 +61,8 @@
     </nav>
 </div>
 <div class="panel-body clearfix main-panel-body ">
-    <div class="left-menu">
-        <div class="left-menu-content">
-            <div class="panel panel-menu">
-                <div class="panel-heading">
-                    <span class="no-collapse">增强功能<i class="wi wi-appsetting pull-right setting"></i></span>
-                </div>
-                <ul class="list-group">
-                    <li class="list-group-item ">
-                        <a href="./../../../index.php?c=mc&a=member&" class="text-over">
-                            <i class="wi wi-reply"></i>
-                            会员管理 </a>
-                    </li>
-                    <li class="list-group-item ">
-                        <a href="./../../../index.php?c=platform&a=qr&" class="text-over">
-                            <i class="wi wi-qrcode"></i>
-                            二维码/转化链接 </a>
-                    </li>
-                    <li class="list-group-item ">
-                        <a href="./../../../index.php?c=platform&a=mass&" class="text-over">
-                            <i class="wi wi-crontab"></i>
-                            定时群发 </a>
-                    </li>
-                    <li class="list-group-item ">
-                        <a href="./../../../index.php?c=platform&a=material&" class="text-over">
-                            <i class="wi wi-redact"></i>
-                            素材/编辑器 </a>
-                    </li>
-                    <li class="list-group-item ">
-                        <a href="./../../../index.php?c=site&a=multi&do=display&" class="text-over">
-                            <i class="wi wi-home"></i>
-                            微官网-文章 </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="panel panel-menu">
-                <div class="panel-heading">
-                    <span class="no-collapse">粉丝<i class="wi wi-appsetting pull-right setting"></i></span>
-                </div>
-                <ul class="list-group">
-                    <li class="list-group-item ">
-                        <a href="./../../../index.php?c=mc&a=fans&" class="text-over">
-                            <i class="wi wi-fansmanage"></i>
-                            粉丝管理 </a>
-                    </li>
-                    <li class="list-group-item active">
-                        <a href="./../../../index.php?c=mc&a=member&" class="text-over">
-                            <i class="wi wi-fans"></i>
-                            会员管理 </a>
-                    </li>
-                </ul>
-            </div>
+    <div class="left-menu" id="leftMenu">
 
-        </div>
     </div>
     <div style="background: #FFF;margin-left: 10px;">
         <div class="right-content" style="width: 1000px;">

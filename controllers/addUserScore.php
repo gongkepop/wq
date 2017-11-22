@@ -15,36 +15,22 @@ require_once IA_ROOT . '/wq/common/core/CoreFactory.php';
 require_once IA_ROOT . '/wq/service/AddToHaiQi.php';
 
 
-if (trim($_GPC['mobile'])) {
-    $mobile = trim($_GPC['mobile']);
-} else {
-    CoreFactory::urlGo('views/User.html', '手机号被不能为空');
-}
-$user = pdo_get('mc_members', array('uniacid' => 1, 'mobile' => $mobile));
-//
-//if (!empty($user) || !$user) {
-//    CoreFactory::urlGo('views/User.html', '手机号被占用');
-//}
+$uid  = $_GPC['uid'];
+$user = pdo_get('mc_members', array('uniacid' => 1, 'uid' => $uid));
+$data = array('credit1' => $user['credit1'] + intval($_GPC['credit1']));
+pdo_update('mc_members', $data , array('uid' => $uid));
 
-$password = $_GPC['password'];
-
-$salt = random(8);
-$data = array(
-    'credit1' => $user['credit1'] + intval($_GPC['credit1']),
-);
-
-pdo_update('mc_members', $data);
-$uid = pdo_insertid();
 
 
 $params = [
+    'mobile' => $user['mobile'],
     'score' => intval($_GPC['credit1']),
 ];
 
 $haiqi = new AddToHaiQi();
-$haiqi->addUser($params);
+$haiqi->updateScore($params);
 
 
-CoreFactory::urlGo('views/User.html', '更新积分成功用户id' . $uid);
+CoreFactory::urlGo('views/UserManage.html', '更新积分成功用户id' . $uid);
 
 
