@@ -1,6 +1,21 @@
 /**
  * Created by gok11139 on 2017/11/21.
  */
+
+
+$(function () {
+    var host = window.location.host;
+    var userUrl = 'http://' + host + '/wq/controllers/baseController.php';
+    $.getJSON(userUrl, function (data) {
+        if (data.code == 1) {
+
+            $("#head").html(htmlMenu);
+            $("i.wi-user").append(data.username);
+        } else {
+            window.location.href = 'http://' + host + '/web/index.php?c=user&a=login&';
+        }
+    });
+});
 var htmlMenu = '\
 <nav class="navbar navbar-default" role="navigation">\
     <div class="container ">\
@@ -21,7 +36,7 @@ var htmlMenu = '\
                 <li><a href="./../../../index.php?c=help&a=display&" target="_blank">帮助系统</a></li>\
             </ul>\
             <ul class="nav navbar-nav navbar-right">\
-                <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="wi wi-user color-gray"></i>admin<span class="caret"></span></a>\
+                <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="wi wi-user color-gray"></i><span class="caret"></span></a>\
                 <ul class="dropdown-menu color-gray" role="menu">\
                     <li><a href="./../../../index.php?c=user&a=profile&" target="_blank"><i class="wi wi-account color-gray"></i> 我的账号</a></li>\
                     <li class="divider"></li>\
@@ -35,7 +50,3 @@ var htmlMenu = '\
         </div>\
     </div>\
 </nav>';
-
-$(function () {
-    $("#head").html(htmlMenu);
-});

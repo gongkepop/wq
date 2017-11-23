@@ -11,8 +11,11 @@ var leftMenu ='\
                 <li class="list-group-item ">\
                     <a href="./UserManage.html" class="text-over"><i class="wi wi-fansmanage"></i> 用户列表 </a>\
                 </li>\
-                <li class="list-group-item active">\
+                <li class="list-group-item">\
                     <a href="./User.html" class="text-over"><i class="wi wi-fans"></i> 新增用户 </a>\
+                </li>\
+                <li class="list-group-item">\
+                    <a href="http://weiqing.liansuosoft.com/" class="text-over" target="_blank"><i class="wi wi-fans"></i> 去海奇 </a>\
                 </li>\
             </ul>\
         </div>\
