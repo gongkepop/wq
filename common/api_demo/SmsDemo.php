@@ -163,7 +163,7 @@ header('Content-Type: text/plain; charset=utf-8');
 
 $response = SmsDemo::sendSms(
     "龚轲", // 短信签名
-    "SMS_107080144", // 短信模板编号
+    "SMS_109425441", // 短信模板编号
     "15050585914", // 短信接收者
     Array(  // 短信模板中字段的值
         "code"=>"12345",
