@@ -19,13 +19,9 @@ $where = '';
 
 $time = time();
 
-if (empty($_GPC['starttime'])) {
-    $starttime = date('Y-m-d', $time) . ' 00:00:00';
-}
+$starttime = empty($_GPC['starttime']) ? $starttime = date('Y-m-d', $time) . ' 00:00:00' : $_GPC['starttime'];
 
-if (empty($_GPC['endtime'])) {
-    $endtime = date('Y-m-d', $time) . ' 23:59:59';
-}
+$endtime = empty($_GPC['endtime']) ? $endtime = date('Y-m-d', $time) . ' 23:59:59' : $_GPC['endtime'];
 
 
 $where = 'where r.createtime >= :starttime AND r.createtime < :endtime';

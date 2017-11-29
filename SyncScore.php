@@ -19,13 +19,9 @@ $where = '';
 
 $time = time();
 
-if (empty($_GPC['starttime'])) {
-    $starttime = date('Y-m-d', $time) . ' 00:00:00';
-}
+$starttime = empty($_GPC['starttime']) ? $starttime = date('Y-m-d', $time) . ' 00:00:00' : $_GPC['starttime'];
 
-if (empty($_GPC['endtime'])) {
-    $endtime = date('Y-m-d', $time) . ' 23:59:59';
-}
+$endtime = empty($_GPC['endtime']) ? $endtime = date('Y-m-d', $time) . ' 23:59:59' : $_GPC['endtime'];
 
 
 $where = 'where r.createtime >= :starttime AND r.createtime < :endtime';
@@ -38,9 +34,6 @@ $params[':endtime'] = strtotime($endtime);
 $where .= " AND r.credittype =  'credit1'";
 
 
-$sql = 'SELECT `num` FROM ' . tablename('mc_credits_record') . " WHERE  $where";
-
-
 //if ($_GPC['credittype'] == 'credit2') {
 //
 //    $pay = number_format($pay, 2);
@@ -50,7 +43,7 @@ $sql = 'SELECT `num` FROM ' . tablename('mc_credits_record') . " WHERE  $where";
 //}
 
 
-$sql = 'SELECT * FROM ' . tablename('mc_credits_record') . ' r left join ' .tablename('mc_members').
+$sql = 'SELECT * FROM ' . tablename('mc_credits_record') . ' r left join ' . tablename('mc_members') .
     ' u on r.uid = u.uid '
     . "{$where} ORDER BY r.createtime DESC ";
 //echo $sql;die;

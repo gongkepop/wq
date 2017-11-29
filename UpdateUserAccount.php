@@ -23,17 +23,25 @@ if (empty($user)) {
     return false;
 }
 
+
 $score = intval($_GPC['score']) ? intval($_GPC['score']) : 0;
 $amount = intval($_GPC['amount']) ? intval($_GPC['amount']) : 0;
 $user['credit1'] += $score;
 $user['credit2'] += $amount;
 
-$result = pdo_update('mc_members', $user, ['uid' => $user['uid']]);
-
-if ($result) {
-    echo CoreFactory::formatSuccess(['手机号' => $mobile], '更新成功');
-} else {
-    echo CoreFactory::interrupt();
+if ($score != 0) {
+    mc_credit_update($user['uid'], 'credit1', $score, array(0, '海奇变更 积分', 'haiqi', 0, 0));
 }
+if ($amount != 0) {
+    mc_credit_update($user['uid'], 'credit2', $amount, array(0, '海奇变更 余额', 'haiqi', 0, 0));
+}
+
+//$result = pdo_update('mc_members', $user, ['uid' => $user['uid']]);
+
+//if ($result) {
+    echo CoreFactory::formatSuccess(['手机号' => $mobile], '更新成功');
+//} else {
+//    echo CoreFactory::interrupt();
+//}
 
 
